@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap");
+
+.App {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  background-color: rgba(216, 216, 216, 0.322);
+}
+
+.navbar {
+  height: 80px;
+  z-index: 9999;
+}
+
+.home-container {
+  width: 100%;
+  height: 100vh;
+  margin-top: -80px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 120px 30px;
+
+  // Home
+  .home-card {
+    width: 21%;
+    height: 350px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    img {
+      width: 50%;
+      height: 48%;
+      margin: 30px 0;
+    }
+    h4 {
+      margin-top: -15px;
+      font-weight: 600;
+    }
+    // .category {
+    //   width: 80%;
+    //   height: 2rem;
+    //   display: flex;
+    //   align-items: center;
+    //   margin-top: -5px;
+    //   ul {
+    //     display: flex;
+    //     justify-content: space-evenly;
+    //     margin: 0;
+    //     padding: 0;
+    //     width: 100%;
+    //     li {
+    //       list-style: none;
+    //       color: rgb(63, 63, 63);
+    //       font-weight: 600;
+    //     }
+    //   }
+    // }
+    .price-stock {
+      width: 70%;
+      height: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      p {
+        font-weight: 700;
+      }
+    }
+  }
+  .home-card:hover {
+    transform: scale(1.1);
+  }
+}
+
+// Shopping Cart
+.cart-container {
+  width: 100%;
+  height: 100%;
+  margin-top: -80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 120px 30px;
+  padding-bottom: 0;
+  .cart-content-container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    .title {
+      font-size: 1.2em;
+      font-weight: 700;
+    }
+    .cart-list-container {
+      box-sizing: border-box;
+      border-radius: 10px;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+      width: 65%;
+      height: 100%;
+      background: white;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p {
+        align-self: flex-start;
+      }
+      .cart-card {
+        box-sizing: border-box;
+        border-radius: 10px;
+        width: 100%;
+        height: 150px;
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 10px;
+        margin-bottom: 20px;
+        .photo {
+          border-radius: 10px;
+          overflow: hidden;
+          width: 15%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: rgba(128, 128, 128, 0.719);
+          img {
+            width: 80%;
+          }
+        }
+        .content {
+          width: 83%;
+          height: 80%;
+          padding: 10px 10px;
+          display: flex;
+          justify-content: space-between;
+          .info {
+            width: 65%;
+            h3 {
+              font-weight: 600;
+            }
+            .category {
+              width: 80%;
+              height: 2rem;
+              display: flex;
+              align-items: center;
+              margin-top: -5px;
+              ul {
+                display: flex;
+                justify-content: flex-start;
+                margin: -10px 0 0 0;
+                padding: 0;
+                width: 100%;
+                li {
+                  list-style: none;
+                  color: rgb(63, 63, 63);
+                  font-weight: 600;
+                  margin-right: 20px;
+                }
+              }
+            }
+          }
+          .quantity {
+            display: flex;
+            justify-content: flex-end;
+            height: 30%;
+            button {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 20px;
+              width: 15%;
+            }
+            input {
+              text-align: center;
+              width: 20%;
+            }
+            .decr {
+              border-radius: 5px 0 0 5px;
+            }
+            .incr {
+              border-radius: 0 5px 5px 0;
+            }
+          }
+        }
+      }
+    }
+    .right-container {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      .amount-container {
+        box-sizing: border-box;
+        border-radius: 10px;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        .total-amount {
+          margin-bottom: 45px;
+          .bill {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: -10px;
+          }
+          .total {
+            font-weight: 700;
+            p {
+              margin-bottom: -5px;
+            }
+          }
+          .amount {
+            font-weight: 700;
+            p {
+              margin-bottom: -5px;
+            }
+          }
+        }
+      }
+      .discount {
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cart-container {
+    .cart-content-container {
+      width: 90%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      .title {
+        font-size: 1.2em;
+        font-weight: 700;
+      }
+      .cart-list-container {
+        width: 100%;
+        margin-bottom: 20px;
+        .size {
+          font-size: 13px;
+          align-self: flex-start;
+        }
+        .cart-card {
+          height: 100px;
+          .content {
+            .info {
+              width: 65%;
+              h3 {
+                font-size: 15px;
+                font-weight: 600;
+              }
+              .category {
+                margin-bottom: -10px;
+                ul {
+                  li {
+                    font-size: 13px;
+                  }
+                }
+              }
+            }
+            .quantity {
+              display: flex;
+              justify-content: flex-end;
+              height: 30%;
+              button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 20px;
+                width: 15%;
+              }
+              input {
+                text-align: center;
+                width: 20%;
+              }
+              .decr {
+                border-radius: 5px 0 0 5px;
+              }
+              .incr {
+                border-radius: 0 5px 5px 0;
+              }
+            }
+          }
+        }
+      }
+      .right-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        .amount-container {
+          box-sizing: border-box;
+          border-radius: 10px;
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+          width: 100%;
+          height: 100%;
+          padding: 20px;
+          background: white;
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 20px;
+          .total-amount {
+            margin-bottom: 45px;
+            .bill {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: -10px;
+            }
+            .total {
+              font-weight: 700;
+              p {
+                margin-bottom: -5px;
+              }
+            }
+            .amount {
+              font-weight: 700;
+              p {
+                margin-bottom: -5px;
+              }
+            }
+          }
+        }
+        .discount {
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+  }
+}
